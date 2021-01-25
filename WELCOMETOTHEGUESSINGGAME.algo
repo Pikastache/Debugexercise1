@@ -1,0 +1,107 @@
+PRINTF : <WELCOME TO THE GUESSING GAME!>
+    input = Choose your difficulty level
+
+    if == very easy
+        setvalue 1 to 5
+
+            START {
+                INPUT = Give a number!
+                    IF number > setvalue
+                        OUTPUT = Too big...
+                    ELSE IF number < setvalue
+                        OUTPUT = Too small...
+                    ELSE IF number = setvalue
+                        OUTPUT = Gongratulation!
+
+                    OPTION : Play again?
+                            Quit?
+            } 
+
+    else if == easy
+        setvalue [1 to 10]
+
+	5 tries
+        
+            START {
+                INPUT = Give a number!
+                    IF number > setvalue
+                        OUTPUT = Too big...
+			        ADD 1 number
+                    ELSE IF number < setvalue
+                        OUTPUT = Too small...
+			        ADD 1 number
+                    ELSE IF number = setvalue
+                        OUTPUT = Gongratulation!
+		            ELSE IF number > 5
+			        OUTPUT = Failure...
+
+                    OPTION : Play again?
+                            Quit?
+            } 
+
+    else if == medium
+        setvalue [1 to 50]
+
+	5 tries
+
+            START {
+               INPUT = Give a number!
+                    IF number > setvalue
+                        OUTPUT = Too big...
+			        ADD 1 number
+                    ELSE IF number < setvalue
+                        OUTPUT = Too small...
+			        ADD 1 number
+                    ELSE IF number = setvalue
+                        OUTPUT = Gongratulation!
+		            ELSE IF number > 5
+			        OUTPUT = Failure...
+
+                    OPTION : Play again?
+                            Quit?
+            }
+
+    else if == hard
+        setvalue [1 to 100]
+
+	8 tries
+
+            START {
+                INPUT = Give a number!
+                    IF number > setvalue
+                        OUTPUT = Too big...
+			        ADD 1 number
+                    ELSE IF number < setvalue
+                        OUTPUT = Too small...
+			        ADD 1 number
+                    ELSE IF number = setvalue
+                        OUTPUT = Gongratulation!
+		            ELSE IF number > 8
+			        OUTPUT = Failure...
+
+                    OPTION : Play again?
+                            Quit?
+            }
+    
+    else if == Hardcore
+        setvalue random [1 to 1000]
+
+	9 tries
+
+            START {
+                INPUT = Give a number!
+                    IF number > setvalue
+                        OUTPUT = Too big...
+			        ADD 1 number
+                    ELSE IF number < setvalue
+                        OUTPUT = Too small...
+			        ADD 1 number
+                    ELSE IF number = setvalue
+                        OUTPUT = Gongratulation!
+		            ELSE IF number > 9
+			        OUTPUT = Failure...
+
+                    OPTION : Play again?
+                            Quit?
+            }
+            END
